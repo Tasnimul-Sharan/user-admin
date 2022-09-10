@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const UsersInfoRow = ({ user, setReload, reload, refetch }) => {
   const { _id, userName, member, time, date } = user;
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/usersInfo/${id}`, {
+    fetch(`https://pure-badlands-00734.herokuapp.com/usersInfo/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

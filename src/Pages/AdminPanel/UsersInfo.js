@@ -12,7 +12,7 @@ const UsersInfo = () => {
     isLoading,
     refetch,
   } = useQuery("usersInfo", () =>
-    fetch("http://localhost:5000/usersInfo", {
+    fetch("https://pure-badlands-00734.herokuapp.com/usersInfo", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

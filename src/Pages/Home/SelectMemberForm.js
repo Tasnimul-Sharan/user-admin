@@ -10,13 +10,15 @@ const SelectMemberForm = () => {
   const { register, handleSubmit } = useForm();
   const [user] = useAuthState(auth);
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/usersInfo", data).then((res) => {
-      const { data } = res;
-      console.log(data);
-      if (data) {
-        toast.success("You have added a new User Information, Yeah!!!");
-      }
-    });
+    axios
+      .post("https://pure-badlands-00734.herokuapp.com/usersInfo", data)
+      .then((res) => {
+        const { data } = res;
+        console.log(data);
+        if (data) {
+          toast.success("You have added a new User Information, Yeah!!!");
+        }
+      });
   };
   return (
     <div className="mx-auto container my-5 d-flex justify-content-center">
