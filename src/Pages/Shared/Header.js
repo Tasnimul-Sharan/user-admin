@@ -27,7 +27,7 @@ const Header = () => {
               {admin && (
                 <>
                   <Nav.Link as={Link} to="/user">
-                    Maake Admin
+                    Make Admin
                   </Nav.Link>
                 </>
               )}
