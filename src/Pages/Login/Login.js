@@ -7,11 +7,12 @@ import auth from "../../firebase.init";
 import "react-toastify/dist/ReactToastify.css";
 import useToken from "../../Hooks/useToken";
 import Loading from "../Shared/Loading";
+import swal from "sweetalert";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
 
   const [signInWithEmailAndPassword, user, loading] =
     useSignInWithEmailAndPassword(auth);
@@ -34,10 +35,12 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    // if (email !== password) {
-    //   setError("Please Enter an Valid Email or Password");
+    if (email !== password) {
+      // setError("Please Enter an Valid Email or Password");
+      swal("Good Job!", "You are Loged In!", "success");
+    }
+    // else {
     // }
-    console.log("hello user");
     await signInWithEmailAndPassword(email, password);
   };
 
@@ -64,11 +67,11 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
+        {/* <span className="text-danger">{error}</span> */}
         <Button variant="info text-white w-100" type="submit">
           Login
         </Button>
       </Form>
-      {/* <p className="text-danger">{error}</p> */}
       <p className="m-3">
         <Link className="text-primary text-decoration-none" to="/signup">
           <Button variant="success">Create a new account</Button>
