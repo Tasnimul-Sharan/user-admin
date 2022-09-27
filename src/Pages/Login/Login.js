@@ -34,9 +34,9 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    if (email !== password) {
-      setError("Please Enter an Valid Email or Password");
-    }
+    // if (email !== password) {
+    //   setError("Please Enter an Valid Email or Password");
+    // }
     console.log("hello user");
     await signInWithEmailAndPassword(email, password);
   };
@@ -64,11 +64,11 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <p className="text-danger">{error}</p>
         <Button variant="info text-white w-100" type="submit">
           Login
         </Button>
       </Form>
+      {/* <p className="text-danger">{error}</p> */}
       <p className="m-3">
         <Link className="text-primary text-decoration-none" to="/signup">
           <Button variant="success">Create a new account</Button>
