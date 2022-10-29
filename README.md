@@ -1,10 +1,12 @@
-# Getting Started with Create React App
+# User-Admin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live link [https://user-admin-8ce4f.web.app/](https://user-admin-8ce4f.web.app/).
 
-## Available Scripts
+## Admin credential
+Email: tasnimulsharan8962@gmail.com
+Password : 123456789 
 
-In the project directory, you can run:
+
 
 ### `npm start`
 
